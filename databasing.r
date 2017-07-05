@@ -1,0 +1,6 @@
+#install.packages("RODBC")
+require(RODBC)
+dx <- odbcConnect("binay",uid= "root",pwd = "pass" )
+df <- sqlQuery(dx,"select * from qa")
+print(df)
+close(dx)
